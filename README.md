@@ -159,7 +159,7 @@ El dashboard incluye:
 
 ---
 
-# 🎥 7. Video del Proyecto
+#  7. Video del Proyecto
 
 Incluye:
 
@@ -170,7 +170,7 @@ Incluye:
 - Conclusiones  
 
  **Enlace al video:**  
-_(Agregar cuando esté listo)_
+https://youtu.be/CDxJ3KgElP0
 
 ---
 
