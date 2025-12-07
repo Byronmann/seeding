@@ -1,4 +1,4 @@
-# 🎵 Apple Music – Real-Time Analytics (MongoDB + Docker)
+#  Apple Music – Real-Time Analytics (MongoDB + Docker)
 **Examen Final – Bases de Datos II**  
 **Universidad Da Vinci de Guatemala**  
 **Autor: Byron Rodolfo Maldonado Palacios**
