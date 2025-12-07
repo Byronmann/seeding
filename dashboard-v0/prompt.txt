@@ -1,0 +1,77 @@
+Design a modern "Apple Music Analytics Admin Dashboard" for data analysts and executives.
+
+The dashboard consumes a REST API with 5 endpoints:
+
+1) GET /api/royalties?days=30  
+   - Returns a list of artists with the totalSeconds streamed in the last 30 days.
+
+2) GET /api/top-songs?country=GT&days=7  
+   - Returns the Top 10 most played songs in a specific country and time window.
+
+3) GET /api/users/zombies  
+   - Returns Premium users with no activity in the last 30 days (churn risk).
+
+4) GET /api/demographics/reggaeton  
+   - Returns the age distribution of users that listen to Reggaeton.
+
+5) GET /api/heavy-users?artist=Bad Bunny&limit=5  
+   - Returns the users that listened to the highest number of distinct songs from a given artist.
+
+Layout requirements:
+
+- Top navigation bar with Apple Music logo, page title "Apple Music Analytics", user avatar on the right.
+- Left sidebar with sections:
+  - Overview
+  - Royalties
+  - Top Songs
+  - Churn & Zombies
+  - Demographics
+  - Heavy Users
+
+Main screen sections:
+
+1) Overview section (top of the page):
+   - KPI cards showing:
+     - Total streams (last 30 days)
+     - Total active users
+     - Number of Premium users
+     - Number of Zombie users
+   - A small line chart of "Streams per day" (sample data is OK).
+
+2) Royalties section:
+   - Bar chart showing totalSeconds per artist (top 5).
+   - Table below with columns: Artist, Total Seconds, Estimated Royalties (USD), Last Update.
+   - Use a clean minimalist look that could fit Apple’s design language.
+
+3) Top Songs section:
+   - Country filter (dropdown with GT, US, MX, etc.).
+   - Days filter (7, 14, 30).
+   - Table listing the 10 most played songs with columns:
+     - Rank, Title, Artist, Total Reproductions, Country.
+   - Optional horizontal bar chart for totalReproductions per song.
+
+4) Churn & Zombie Users section:
+   - Card explaining: "Premium users with no activity in the last 30 days".
+   - Table with columns:
+     - Username, Email, Country, Subscription, Status (ZOMBIE).
+   - Badge or pill component to highlight the ZOMBIE status in red/orange.
+   - KPI showing "Total Zombie Premium Users".
+
+5) Demographics section:
+   - Bar chart for age buckets (15-20, 21-30, 31-40, 41-60, 61+).
+   - Each bar uses the totalListeners metric.
+   - Secondary metric shown as tooltip or small text: avgAge per bucket.
+   - Short explanatory text: "Age distribution of users that listened to Reggaeton".
+
+6) Heavy Users section:
+   - Card title: "Heavy Users – Bad Bunny".
+   - Table listing:
+     - UserId (or masked ID), Total Distinct Songs, Example Country.
+   - Optionally a small leaderboard style layout (top 5 users).
+
+General style:
+
+- Use a dark theme inspired by Apple Music with accent color in pink / purple.
+- Clean typography, enough spacing, rounded cards, subtle shadows.
+- Make it look like a real product dashboard ready to be implemented with React + Tailwind.
+- Place sample data in all tables and charts so the UI looks complete.
